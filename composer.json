@@ -1,0 +1,30 @@
+{
+  "name": "igbas90/youtube-data-api",
+  "description": "Youtube Data API v3",
+  "keywords": ["youtube", "data", "api", "v3"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aleksey Sidorkevich",
+      "email": "igbas0404@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "guzzlehttp/guzzle": "^6.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.4",
+    "phpunit/php-invoker": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Igbas90\\YoutubeDataApi\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Igbas90\\YoutubeDataApi\\Tests\\": "tests"
+    }
+  }
+}
