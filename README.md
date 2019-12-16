@@ -8,7 +8,7 @@ Youtube Data API
 - [videos.list](https://developers.google.com/youtube/v3/docs/videos/list)
 - [playlistItems.list](https://developers.google.com/youtube/v3/docs/playlistItems/list)
 
-##Authorization
+## Authorization
 > <div style="background:rgba(255,0,0,0.3); padding: 10px;"><b>!!! This library not supported OAuth2, only GOOGLE CONSOLE API KEY</b></div>
 
 
@@ -21,7 +21,7 @@ composer require igbas90/youtube-data-api
 
 
 
-##Usage
+## Usage
 
 #### Instance
 
@@ -160,7 +160,7 @@ $client->setResponseFormatter(new BodyJsonDecodeFormatter());
 $response = $client->request();
 ```
 
-##TEST
+## TEST
 
 forward running the tests you need to set the environment variables in define.php, 
 for this just copy define-example.php into define.php
