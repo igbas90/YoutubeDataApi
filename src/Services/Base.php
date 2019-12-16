@@ -202,6 +202,13 @@ abstract class Base
         return $response;
     }
 
+    /**
+     * @param $name
+     * @param $arguments
+     * @return $this
+     * @throws YoutubeDataApiUndefinedMethodException
+     * @throws YoutubeDataApiUndefinedPropertyException
+     */
     public function __call($name, $arguments)
     {
         if (!preg_match("/^set[\w]+/", $name)) {
