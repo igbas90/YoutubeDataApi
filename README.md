@@ -8,6 +8,8 @@ Youtube Data API
 - [videos.list](https://developers.google.com/youtube/v3/docs/videos/list)
 - [playlistItems.list](https://developers.google.com/youtube/v3/docs/playlistItems/list)
 
+
+
 ## Authorization
 > <div style="background:rgba(255,0,0,0.3); padding: 10px;"><b>!!! This library not supported OAuth2, only GOOGLE CONSOLE API KEY</b></div>
 
@@ -29,7 +31,7 @@ Using a single shell. <b>Services are created when they are accessed</b>
 ```php
 use Igbas90\YoutubeDataApi\YoutubeDataApi;
 $dataApiClient = new YoutubeDataApi();
-$commentsThreadClient = $dataApi->commentsThreadList;
+$commentsThreadClient = $dataApiClient->commentsThreadList;
 ```
 Create only service
 ```php
