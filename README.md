@@ -119,13 +119,13 @@ foreach($client->getIterator() as $response) {
 By default, the iterator works with the original service, 
 which is not very convenient for using multiple iterators. 
 To exclude the influence of the iterator on the service, 
-you can set the iterator to work with the service clone.
+you can set the iterator to work with the service <b>clone</b>.
 To do this, call the <b>getIterator()</b> method, with the parameter <b>true</b>.
 ```php
 /** @var $client \Igbas90\YoutubeDataApi\Services\CommentsThreadList*/ 
 $iterator1 = $client->getIterator(true);
 $iterator2 = $client->setVideoId('videoId')->getIterator(true);
-$iterator3 = $client->params([
+$iterator3 = $client->setParams([
     'videoId' => '9L9UQANH5oI',
     'apiKey' => 'google console api key'
 ])->getIterator(true);
