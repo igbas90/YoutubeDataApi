@@ -9,15 +9,15 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
 /**
  * Class PlaylistItemsList
  *
- * @method setApiKey(string $key)
- * @method setId($value)
- * @method setMaxResults($value)
- * @method setPageToken($value)
- * @method setParams(array $params)
- * @method setPart($part)
- * @method setProxy(string $proxy) : Base
- * @method setPlaylistId($value)
- * @method setVideoId($value)
+ * @method PlaylistItemsList setApiKey(string $key)
+ * @method PlaylistItemsList setId($value)
+ * @method PlaylistItemsList setMaxResults($value)
+ * @method PlaylistItemsList setPageToken($value)
+ * @method PlaylistItemsList setParams(array $params)
+ * @method PlaylistItemsList setPart($part)
+ * @method PlaylistItemsList setProxy(string $proxy) : Base
+ * @method PlaylistItemsList setPlaylistId($value)
+ * @method PlaylistItemsList setVideoId($value)
  *
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas0404@mail.com>

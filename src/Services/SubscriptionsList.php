@@ -9,17 +9,17 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
 /**
  * Class SubscriptionsList
  *
- * @method setApiKey(string $key)
- * @method setChannelId($value)
- * @method setId($value)
- * @method setForChannelId($value)
- * @method setMaxResults($value)
- * @method setOnBehalfOfContentOwner($value)
- * @method setOrder($value)
- * @method setPageToken($value)
- * @method setParams(array $params)
- * @method setPart($part)
- * @method setProxy(string $proxy) : Base
+ * @method SubscriptionsList setApiKey(string $key)
+ * @method SubscriptionsList setChannelId($value)
+ * @method SubscriptionsList setId($value)
+ * @method SubscriptionsList setForChannelId($value)
+ * @method SubscriptionsList setMaxResults($value)
+ * @method SubscriptionsList setOnBehalfOfContentOwner($value)
+ * @method SubscriptionsList setOrder($value)
+ * @method SubscriptionsList setPageToken($value)
+ * @method SubscriptionsList setParams(array $params)
+ * @method SubscriptionsList setPart($part)
+ * @method SubscriptionsList setProxy(string $proxy) : Base
  *
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas0404@mail.com>

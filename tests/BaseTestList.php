@@ -125,19 +125,10 @@ abstract class BaseTestList extends TestCase
 
         $this->assertIsString($doc, "Dock block is missing");
 
-        preg_match_all("/(?<= @method)\s+\w+/u", $doc, $matches);
-
-        $this->assertTrue(count($params) <= count($matches[0] ?? []), "missing magic methods");
-
-        $propertyNames = [];
-        if (!empty($matches[0])) {
-            foreach($matches[0] as $methodName) {
-                $propertyNames[] = lcfirst(trim(str_replace('set', "", $methodName)));
-            }
-        }
-
         foreach ($params as $paramName => $value) {
-            $this->assertTrue(in_array($paramName, $propertyNames), "magic method set" . ucfirst($paramName) . " is missing in doc block");
+            $methodName = "set" . (ucfirst($paramName));
+            $reg = "/@method +\w* *" . $methodName . "\(/u";
+            $this->assertTrue((preg_match($reg, $doc) == 1), "magic method " . $methodName . "() is missing in doc block");
         }
     }
 

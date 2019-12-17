@@ -8,17 +8,17 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
 /**
  * Class CommentsThreadList
  *
- * @method setApiKey(string $key)
- * @method setChannelId($value)
- * @method setId($value)
- * @method setMaxResults($value)
- * @method setOrder($value)
- * @method setPageToken($value)
- * @method setParams(array $params)
- * @method setPart($part)
- * @method setProxy(string $proxy) : Base
- * @method setSearchTerms($value)
- * @method setVideoId($value)
+ * @method CommentsThreadList setApiKey(string $key)
+ * @method CommentsThreadList setChannelId($value)
+ * @method CommentsThreadList setId($value)
+ * @method CommentsThreadList setMaxResults($value)
+ * @method CommentsThreadList setOrder($value)
+ * @method CommentsThreadList setPageToken($value)
+ * @method CommentsThreadList setParams(array $params)
+ * @method CommentsThreadList setPart($part)
+ * @method CommentsThreadList setProxy(string $proxy) : Base
+ * @method CommentsThreadList setSearchTerms($value)
+ * @method CommentsThreadList setVideoId($value)
  *
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas0404@mail.com>

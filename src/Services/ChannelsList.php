@@ -10,12 +10,12 @@ use phpDocumentor\Reflection\DocBlock\Tags\BaseTag;
 /**
  * Class ChannelsList
  * magick methods
- * @method setCategoryId($value)
- * @method setId($value)
- * @method setForUsername($value)
- * @method setHl($value)
- * @method setMaxResults($value)
- * @method setPageToken($value)
+ * @method ChannelsList setCategoryId($value)
+ * @method ChannelsList setId($value)
+ * @method ChannelsList setForUsername($value)
+ * @method ChannelsList setHl($value)
+ * @method ChannelsList setMaxResults($value)
+ * @method ChannelsList setPageToken($value)
  *
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas0404@mail.com>

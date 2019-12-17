@@ -9,18 +9,18 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
 /**
  * Class VideosList
  *
- * @method setApiKey(string $key)
- * @method setChart($value)
- * @method setId($value)
- * @method setMaxHeight($value)
- * @method setMaxWidth($value)
- * @method setMaxResults($value)
- * @method setPageToken($value)
- * @method setParams(array $params)
- * @method setPart($part)
- * @method setProxy(string $proxy) : Base
- * @method setRegionCode($value)
- * @method setVideoCategoryId($value)
+ * @method VideosList setApiKey(string $key)
+ * @method VideosList setChart($value)
+ * @method VideosList setId($value)
+ * @method VideosList setMaxHeight($value)
+ * @method VideosList setMaxWidth($value)
+ * @method VideosList setMaxResults($value)
+ * @method VideosList setPageToken($value)
+ * @method VideosList setParams(array $params)
+ * @method VideosList setPart($part)
+ * @method VideosList setProxy(string $proxy) : Base
+ * @method VideosList setRegionCode($value)
+ * @method VideosList setVideoCategoryId($value)
  *
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas0404@mail.com>
