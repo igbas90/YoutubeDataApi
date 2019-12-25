@@ -5,7 +5,7 @@ namespace Igbas90\YoutubeDataApi\Exception;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class YoutubeDataApiBadResponseException extends \Exception
+class YoutubeDataApiBadResponseException extends YoutubeDataApiHttpException
 {
     public $request;
     public $response;
