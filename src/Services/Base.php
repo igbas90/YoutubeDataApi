@@ -41,6 +41,8 @@ abstract class Base
 
     protected $responseFormatter;
 
+    protected $connectTimeout = null;
+
     /**
      * ThreadComments constructor.
      * @param array $config
@@ -66,6 +68,21 @@ abstract class Base
     public function getApiKey()
     {
         return $this->apiKey;
+    }
+
+    /**
+     * @param int $timeout
+     * @return $this
+     */
+    public function setConnectTimeout(int $timeout)
+    {
+        $this->connectTimeout = $timeout;
+        return $this;
+    }
+
+    public function getConnectTimeout()
+    {
+        return $this->connectTimeout;
     }
 
     public function setResponseFormatter(ResponseFormatter $formatter)
@@ -123,6 +140,11 @@ abstract class Base
         $params['key'] = $this->apiKey;
 
         $params = array_merge(['query' => $params], ($this->proxy ? ['proxy' => $this->proxy] : []));
+
+        if ($this->connectTimeout) {
+            $params['connect_timeout']  =  5;
+        }
+
         return $params;
     }
 
