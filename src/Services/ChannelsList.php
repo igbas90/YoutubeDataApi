@@ -29,6 +29,7 @@ class ChannelsList extends Base
     const PART_CONTENT_DETAILS = 'contentDetails';
     const PART_SNIPPET = 'snippet';
     const PART_ID = 'id';
+    const PART_STATUS = 'status';
 
     /**
      * @var string
@@ -64,6 +65,7 @@ class ChannelsList extends Base
             self::PART_CONTENT_DETAILS,
             self::PART_SNIPPET,
             self::PART_ID,
+            self::PART_STATUS
         ];
     }
 

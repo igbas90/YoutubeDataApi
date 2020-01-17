@@ -93,16 +93,12 @@ abstract class Base
         $values = [];
         if (is_array($part)) {
             foreach ($part as $item) {
-                if (!in_array($item, $this->getAllowedParts())) {
-                    throw new YoutubeDataApiInvalidParamsException("part '" . $item . "' not allowed");
-                }
                 $values[] = $item;
             }
-        } else {
-            if (!in_array($part, $this->getAllowedParts())) {
-                throw new YoutubeDataApiInvalidParamsException("part '" . $part . "' not allowed");
-            }
+        } elseif (is_string($part)) {
             $values[] = $part;
+        } else {
+            throw new YoutubeDataApiInvalidParamsException("part must be array or string");
         }
         $this->params['part'] = $values;
 
