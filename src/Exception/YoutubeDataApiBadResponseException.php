@@ -7,16 +7,23 @@ use Psr\Http\Message\ResponseInterface;
 
 class YoutubeDataApiBadResponseException extends YoutubeDataApiHttpException
 {
+    /**
+     * @var RequestInterface
+     */
     public $request;
+
+    /** @var ResponseInterface|null */
     public $response;
 
     public function __construct(
         $message,
         RequestInterface $request,
         ResponseInterface $response = null,
-        $code,
+        $code = 0,
         \Exception $previous = null)
     {
+        $this->request = $request;
+        $this->response = $response;
         parent::__construct($message, $code, $previous);
     }
 

@@ -202,7 +202,13 @@ abstract class Base
                 $e->getCode(),
                 $e);
         } catch (\GuzzleHttp\Exception\RequestException $e) {
-            throw new YoutubeDataApiBadRequestException($e->getMessage(), $e->getCode(), $e);
+            throw new YoutubeDataApiBadRequestException(
+                $e->getMessage(),
+                $e->getRequest(),
+                $e->getResponse(),
+                $e->getCode(),
+                $e
+                );
         }
 
         return $format ? $this->formatResponse($response) : $response;
