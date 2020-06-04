@@ -36,6 +36,7 @@ class VideosList extends Base
     const PART_RECORDING_DETAILS = 'recordingDetails';
     const PART_STATISTICS = 'statistics';
     const PART_TOPIC_DETAILS = 'topicDetails';
+    const PART_LIVE_STREAMING_DETAILS = 'liveStreamingDetails';
 
 
     /**
@@ -76,6 +77,7 @@ class VideosList extends Base
             self::PART_RECORDING_DETAILS,
             self::PART_STATISTICS,
             self::PART_TOPIC_DETAILS,
+            self::PART_LIVE_STREAMING_DETAILS,
         ];
     }
 
