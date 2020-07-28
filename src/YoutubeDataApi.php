@@ -9,6 +9,7 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
 use Igbas90\YoutubeDataApi\Services\SubscriptionsList;
 use Igbas90\YoutubeDataApi\Services\CommentsThreadList;
 use Igbas90\YoutubeDataApi\Exception\YoutubeDataApiUndefinedPropertyException;
+use Igbas90\YoutubeDataApi\Services\VideoCategoriesList;
 use Igbas90\YoutubeDataApi\Services\VideosList;
 
 
@@ -21,6 +22,7 @@ use Igbas90\YoutubeDataApi\Services\VideosList;
  * @property ChannelsList $channelsList
  * @property PlaylistItemsList $playlistItemsList
  * @property VideosList $videosList
+ * @property VideoCategoriesList $videoCategoriesList
  *
  * @author Alexey Sidorkevich <igbas0404@mail.com>
  */
@@ -31,6 +33,7 @@ class YoutubeDataApi
     const CHANNELS_LIST = 'channelsList';
     const PLAYLIST_ITEMS_LIST = 'playlistItemsList';
     const VIDEOS_LIST = 'videosList';
+    const VIDEO_CATEGORIES_LIST = 'videoCategoriesList';
 
     /**
      * this proxy will be put to services at the time of the first call
@@ -60,10 +63,8 @@ class YoutubeDataApi
         $this->objects[self::CHANNELS_LIST] = ChannelsList::class;
         $this->objects[self::PLAYLIST_ITEMS_LIST] = PlaylistItemsList::class;
         $this->objects[self::VIDEOS_LIST] = VideosList::class;
+        $this->objects[self::VIDEO_CATEGORIES_LIST] = VideoCategoriesList::class;
 
-        foreach ($config as $key => $value) {
-
-        }
 
         if (!empty($config['proxy'])) {
             $this->setProxy($config['proxy']);

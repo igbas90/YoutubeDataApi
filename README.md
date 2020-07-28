@@ -7,6 +7,7 @@ Youtube Data API
 - [subscriptions.list](https://developers.google.com/youtube/v3/docs/subscriptions/list)
 - [videos.list](https://developers.google.com/youtube/v3/docs/videos/list)
 - [playlistItems.list](https://developers.google.com/youtube/v3/docs/playlistItems/list)
+- [videoCategories.list](https://developers.google.com/youtube/v3/docs/videoCategories/list)
 
 
 
@@ -100,6 +101,7 @@ For pagination you can manually set <b>pageToken</b>
 
 ```php
 use Igbas90\YoutubeDataApi\YoutubeDataApi;
+
 $client = (new YoutubeDataApi())->commentsThreadList->setParams([...]);
 
 $response = $client->setPageToken('pageToken')->request();
