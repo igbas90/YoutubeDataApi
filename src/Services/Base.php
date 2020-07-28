@@ -14,7 +14,7 @@ use Igbas90\YoutubeDataApi\Exception\YoutubeDataApiUndefinedPropertyException;
 /**
  * Class Base
  * @package Igbas90\YoutubeDataApi\Services
- * @author Alexey Sidorkevich <igbas0404@mail.com>
+ * @author Alexey Sidorkevich <igbas040490@gmail.com>
  */
 abstract class Base
 {
@@ -110,6 +110,9 @@ abstract class Base
         $values = [];
         if (is_array($part)) {
             foreach ($part as $item) {
+                if (! is_string($item)) {
+                    throw new YoutubeDataApiInvalidParamsException("part must be array or string");
+                }
                 $values[] = $item;
             }
         } elseif (is_string($part)) {

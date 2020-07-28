@@ -22,7 +22,7 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
  * @method SubscriptionsList setProxy(string $proxy) : Base
  *
  * @package Igbas90\YoutubeDataApi\Services
- * @author Alexey Sidorkevich <igbas0404@mail.com>
+ * @author Alexey Sidorkevich <igbas040490@gmail.com>
  */
 class SubscriptionsList extends Base
 {

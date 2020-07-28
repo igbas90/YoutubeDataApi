@@ -20,7 +20,7 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
  * @method PlaylistItemsList setVideoId($value)
  *
  * @package Igbas90\YoutubeDataApi\Services
- * @author Alexey Sidorkevich <igbas0404@mail.com>
+ * @author Alexey Sidorkevich <igbas040490@gmail.com>
  */
 class PlaylistItemsList extends Base
 {

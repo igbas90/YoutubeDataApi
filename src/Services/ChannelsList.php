@@ -18,7 +18,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\BaseTag;
  * @method ChannelsList setPageToken($value)
  *
  * @package Igbas90\YoutubeDataApi\Services
- * @author Alexey Sidorkevich <igbas0404@mail.com>
+ * @author Alexey Sidorkevich <igbas040490@gmail.com>
  */
 class ChannelsList extends Base
 {
