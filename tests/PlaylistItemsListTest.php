@@ -37,7 +37,7 @@ class PlaylistItemsListTest extends BaseTestList
     {
         return [
             'id' => "ldskhjfhaf",
-            'maxResults' => 120
+            'part' => ['default']
         ];
     }
 }

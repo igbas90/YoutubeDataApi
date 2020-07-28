@@ -147,7 +147,7 @@ abstract class BaseTestList extends TestCase
     public function testExceptionsInvalidParams()
     {
         $this->expectException(YoutubeDataApiInvalidParamsException::class);
-        $this->apiClient->setPart(['failPart']);
+        $this->apiClient->setPart([['failPart']]);
     }
 
     public function testInvalidProxyTest()
