@@ -52,6 +52,6 @@ trait Iteration
             }
         }
 
-        $this->assertFalse($pageToken == ListIterator::FAIL_PAGE_TOKEN, 'very few comments for the test');
+        $this->assertFalse($pageToken == ListIterator::FAIL_PAGE_TOKEN, 'very few items for the test');
     }
 }

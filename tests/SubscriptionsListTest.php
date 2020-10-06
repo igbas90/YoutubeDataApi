@@ -26,7 +26,7 @@ class SubscriptionsListTest extends BaseTestList
     public function getLoadParams(): array
     {
         return [
-            'id' => CHANNEL_ID,
+            'channelId' => CHANNEL_ID,
             'maxResults' => 5,
         ];
     }
