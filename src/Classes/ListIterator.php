@@ -97,6 +97,12 @@ class ListIterator implements \Iterator
         return $this->currentPageToken != self::FAIL_PAGE_TOKEN;
     }
 
+    public function setApiKey(string $apiKey)
+    {
+        $this->resource->setApiKey($apiKey);
+        return $this;
+    }
+
     /**
      * @return mixed
      * @throws \Igbas90\YoutubeDataApi\Exception\YoutubeDataApiInvalidParamsException
