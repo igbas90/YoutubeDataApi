@@ -24,7 +24,7 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas040490@gmail.com>
  */
-class SubscriptionsList extends Base
+class SubscriptionsList extends Base implements Iteratorable
 {
     const PART_CONTENT_DETAILS = 'contentDetails';
     const PART_SNIPPET = 'snippet';
@@ -66,6 +66,10 @@ class SubscriptionsList extends Base
         ];
     }
 
+    /**
+     * @param boolean $cloned
+     * @return ListIterator|\Iterator
+     */
     public function getIterator($cloned = false)
     {
         return new ListIterator(($cloned ? $this : clone $this), $this->params['pageToken']);

@@ -4,9 +4,12 @@ namespace Igbas90\YoutubeDataApi\Tests;
 
 use Igbas90\YoutubeDataApi\Services\Base;
 use Igbas90\YoutubeDataApi\Services\CommentsThreadList;
+use Igbas90\YoutubeDataApi\Tests\traits\Iteration;
 
 class CommentsThreadListTest extends BaseTestList
 {
+    use Iteration;
+
     /** @var $apiClient Base */
     public $apiClient;
     public $apiKey;
@@ -24,7 +27,7 @@ class CommentsThreadListTest extends BaseTestList
     {
         return [
             'videoId' => VIDEO_ID,
-            'maxResults' => 40,
+            'maxResults' => 5,
         ];
     }
 

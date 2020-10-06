@@ -20,7 +20,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\BaseTag;
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas040490@gmail.com>
  */
-class ChannelsList extends Base
+class ChannelsList extends Base implements Iteratorable
 {
     const PART_BRANDING_SETTINGS = 'brandingSettings';
     const PART_LOCALIZATIONS = 'localizations';

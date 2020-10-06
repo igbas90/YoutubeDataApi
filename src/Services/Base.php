@@ -91,6 +91,12 @@ abstract class Base
         return $this;
     }
 
+    public function resetResponseFormatter()
+    {
+        $this->responseFormatter = null;
+        return $this;
+    }
+
     public function setParams(array $params)
     {
         foreach ($params as $paramName => $paramValues) {
@@ -152,11 +158,6 @@ abstract class Base
     }
 
     abstract public function getAllowedParts(): array;
-
-    /**
-     * @return \Iterator|array
-     */
-    abstract public function getIterator();
 
     /**
      * @param string $proxy

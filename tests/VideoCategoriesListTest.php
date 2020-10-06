@@ -43,15 +43,4 @@ class VideoCategoriesListTest extends BaseTestList
             'part' => ['statistics']
         ];
     }
-
-    /**
-     * @depends testUseProxy
-     * @param $apiClient ChannelsList
-     * @throws \Igbas90\YoutubeDataApi\Exception\YoutubeDataApiInvalidParamsException
-     */
-    public function testIterator($apiClient)
-    {
-        $this->assertIsArray($apiClient->getIterator());
-        return $apiClient;
-    }
 }

@@ -4,9 +4,12 @@ namespace Igbas90\YoutubeDataApi\Tests;
 
 use Igbas90\YoutubeDataApi\Services\Base;
 use Igbas90\YoutubeDataApi\Services\SubscriptionsList;
+use Igbas90\YoutubeDataApi\Tests\traits\Iteration;
 
 class SubscriptionsListTest extends BaseTestList
 {
+    use Iteration;
+
     /** @var $apiClient Base */
     public $apiClient;
     public $apiKey;
@@ -24,7 +27,7 @@ class SubscriptionsListTest extends BaseTestList
     {
         return [
             'id' => CHANNEL_ID,
-            'maxResults' => 40,
+            'maxResults' => 5,
         ];
     }
 

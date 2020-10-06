@@ -90,24 +90,19 @@ abstract class BaseTestList extends TestCase
     {
         $this->assertInstanceOf(Base::class, $apiClient->setProxy($this->proxy));
         $this->assertEquals($apiClient->getPrepareParams()['proxy'], $this->proxy);
-        $this->assertInstanceOf(ResponseInterface::class, $apiClient->request());
+        try {
+            $this->assertInstanceOf(ResponseInterface::class, $apiClient->request());
+        } catch (\Exception $e) {
+            $apiClient->resetProxy();
+            throw $e;
+        }
+
         $this->assertEmpty($apiClient->resetProxy()->getProxy());
         return $apiClient;
     }
 
     /**
-     * @depends testUseProxy
-     * @param $apiClient ChannelsList
-     * @throws \Igbas90\YoutubeDataApi\Exception\YoutubeDataApiInvalidParamsException
-     */
-    public function testIterator($apiClient)
-    {
-        $this->assertInstanceOf(ListIterator::class, $apiClient->getIterator());
-        return $apiClient;
-    }
-
-    /**
-     * @depends testIterator
+     * @depends testRequest
      * @param $apiClient ChannelsList
      * @throws \Igbas90\YoutubeDataApi\Exception\YoutubeDataApiInvalidParamsException
      */
@@ -115,6 +110,7 @@ abstract class BaseTestList extends TestCase
     {
         $this->assertInstanceOf(Base::class, $apiClient->setResponseFormatter(new ArrayFormatter()));
         $this->assertIsArray($result = $apiClient->request());
+        $apiClient->resetResponseFormatter();
     }
 
     public function testDocMagick()

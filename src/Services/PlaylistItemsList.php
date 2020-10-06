@@ -22,7 +22,7 @@ use Igbas90\YoutubeDataApi\Classes\ResponseFormatter;
  * @package Igbas90\YoutubeDataApi\Services
  * @author Alexey Sidorkevich <igbas040490@gmail.com>
  */
-class PlaylistItemsList extends Base
+class PlaylistItemsList extends Base implements Iteratorable
 {
     const PART_CONTENT_DETAILS = 'contentDetails';
     const PART_SNIPPET = 'snippet';
