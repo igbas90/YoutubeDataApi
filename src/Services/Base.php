@@ -160,10 +160,10 @@ abstract class Base
     abstract public function getAllowedParts(): array;
 
     /**
-     * @param string $proxy
+     * @param string|null $proxy
      * @return $this
      */
-    public function setProxy(string $proxy): self
+    public function setProxy(string $proxy = null): self
     {
         $this->proxy = $proxy;
         return $this;

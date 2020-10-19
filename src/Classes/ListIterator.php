@@ -4,7 +4,16 @@
 namespace Igbas90\YoutubeDataApi\Classes;
 
 use Igbas90\YoutubeDataApi\Services\Base;
+use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Class ListIterator
+ * @package Igbas90\YoutubeDataApi\Classes
+ *
+ * @mixin Base
+ *
+ * @method getAllowedParts()
+ */
 class ListIterator implements \Iterator
 {
     const FAIL_PAGE_TOKEN = -1;
@@ -12,15 +21,15 @@ class ListIterator implements \Iterator
     /**
      * @var Base
      */
-    private $resource;
+    protected $resource;
 
-    private $startPageToken;
+    protected $startPageToken;
 
-    private $currentPageToken;
+    protected $currentPageToken;
 
-    private $nextPageToken;
+    protected $nextPageToken;
 
-    private $response;
+    protected $response;
 
     public function __construct(Base $resource, string $startPageToken = null)
     {
@@ -97,12 +106,6 @@ class ListIterator implements \Iterator
         return $this->currentPageToken != self::FAIL_PAGE_TOKEN;
     }
 
-    public function setApiKey(string $apiKey)
-    {
-        $this->resource->setApiKey($apiKey);
-        return $this;
-    }
-
     /**
      * @return mixed
      * @throws \Igbas90\YoutubeDataApi\Exception\YoutubeDataApiInvalidParamsException
@@ -111,9 +114,21 @@ class ListIterator implements \Iterator
     {
         $this->resource->setParams(['pageToken' => $this->currentPageToken]);
         $response = $this->resource->request(false);
-        $this->response = clone $response;
-        $content = json_decode($this->response->getBody(), true);
-        $this->nextPageToken = $content['nextPageToken'] ?? self::FAIL_PAGE_TOKEN;
+        $this->extractPageToken($response);
+
+        $this->response = $response;
+
         return $this->resource->formatResponse($response);
+    }
+
+    protected function extractPageToken(ResponseInterface $response)
+    {
+        $content = json_decode($response->getBody(), true);
+        $this->nextPageToken = $content['nextPageToken'] ?? self::FAIL_PAGE_TOKEN;
+    }
+
+    public function getResource()
+    {
+        return $this->resource;
     }
 }
